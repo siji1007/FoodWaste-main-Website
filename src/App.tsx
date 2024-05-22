@@ -4,10 +4,15 @@ import Footer from './Components/footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Vendor from './pages/vendor';
+import LOGIN from './pages/LOGIN';
+
 
 
 
 function App() {
+
+
   let component 
   switch(window.location.pathname){
     case "/":
@@ -25,7 +30,13 @@ function App() {
     case '/Contact':
       component = <Contact/>
       break;
-      
+
+    case '/Vendor':
+    component =<Vendor/>
+    break;
+
+     
+
   }
 
   return (

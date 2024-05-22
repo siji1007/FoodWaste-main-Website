@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ChatModal from './ChatModal';
 import LOGIN from './LOGIN';
+import MockAuthService from './MockAuthService';
 
 const Home: React.FC = () => {
   const [isFloating, setIsFloating] = useState(false);
@@ -12,7 +13,8 @@ const Home: React.FC = () => {
     setIsLoginOpen(!isLoginOpen); // Toggle the state to open/close LOGIN component
   };
 
--
+  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -34,6 +36,8 @@ const Home: React.FC = () => {
   const handleImageClick = (altText: string) => {
     alert(altText);
   };
+
+
 
 
   
@@ -193,7 +197,7 @@ const Home: React.FC = () => {
 
       <div className="centered-login-button">
         <button className="btnLOGIN" onClick={handleLoginButtonClick}>
-          {isLoginOpen ? 'Hide Login' : 'Login'}
+          {isLoginOpen ? 'Hide Login' : 'SHOW LOGIN FORM'}
         </button>
       </div>
 

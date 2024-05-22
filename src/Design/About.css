@@ -70,3 +70,15 @@ body {
 }
 
 
+
+/*LOGIN SUCCESS*/
+body{
+    background-color: Black;
+}
+
+.Vendor-view{
+    background-color: white;
+    height: 100vh;
+}
+
+
