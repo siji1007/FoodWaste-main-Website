@@ -6,10 +6,8 @@ const Vendor: React.FC = () => {
    <body>
       <div className='Vendor-view'>
       <h1>Vendor</h1>
-
       </div>
-      
-
+                             
    </body>
   );
 }
