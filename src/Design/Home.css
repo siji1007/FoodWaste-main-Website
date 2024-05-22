@@ -1,0 +1,522 @@
+.home {
+  position: relative; /* Ensure the header is the positioning context */
+  background-color: white;
+}
+
+#book-me {
+  position: fixed;
+  bottom: 20px; /* Adjust this value to control the distance from the bottom */
+  right: 20px; /* Adjust this value to control the distance from the right */
+  transform: none;
+  transform-origin: 100% 0;
+  z-index: 99999;
+}
+#book-me a {
+  background: #177569;
+  color: #fff;
+  border-color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Montserrat, sans-serif;
+  padding: 10px; /* Adjust this value to fit the icon */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+}
+#book-me a span {
+  display: none; /* Hide the text */
+}
+#book-me svg {
+  margin: 0; /* Remove margin since there's no text */
+}
+
+
+.Title-Vid, .Description-header {
+  position: absolute; /* Position both elements absolutely */
+  left: 20px; /* Adjust left positioning as needed */
+  color: #177569; /* Change color of the elements */
+}
+
+.Description-header {
+
+  padding: 1vh;
+  border-radius: 2vh;
+}
+
+.Title-Vid {
+  font-size:3vw;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  top: 3%; 
+  z-index: 2; 
+}
+
+.Title-Vid span{
+  background-color: #177569;
+  color: white;
+  border-top-left-radius: 15px;
+  padding: 10px;
+}
+
+.Description-header {
+  position: absolute; 
+  font-size:1.2vw;
+  top: 7%; 
+  left: 20px; 
+  width: 35%;  
+  color: white; 
+  z-index: 1; 
+  box-shadow: 0 2px 4px rgba(23, 117, 105, 0.2); 
+}
+
+.Description-header .highlight {
+  background-color: #177569;
+  display: inline-block;
+}
+
+
+.content-backup {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.6rem 1rem;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row; /* Arrange sections horizontally */
+  gap: 20px;
+  height: 15%;
+  border-bottom: 5px solid #177569;
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+  opacity: 1; /* Initial opacity */
+  pointer-events: auto; /* Allow pointer events */
+}
+
+.content-backup.fade-out {
+  opacity: 0; /* Fade out the section */
+  pointer-events: none; /* Disable pointer events */
+}
+
+.content-backup {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition properties */
+}
+
+.content-backup.floating {
+  transform: translate(-50%, calc(-50% - 300px)); /* Move up by 50px */
+  opacity: 0; /* Make the section transparent */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition properties */
+}
+
+
+.content-backup section {
+  width: 200px;
+  display: flex;
+  flex-direction: column; /* Elements inside sections are stacked vertically */
+  align-items: center; /* Center content horizontally */
+
+}
+
+.content-backup section img {
+  margin-bottom: 10px; /* Add margin to the bottom of the image for spacing */
+}
+
+
+
+.content-backup section h1 {
+  color: white;
+  font-size: 2vw;
+}
+
+.content-backup section p {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 1.3vw;
+}
+
+.content-backup section img {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.content-backup section img:hover {
+  transform: translateY(-20px); /* Move the image up slightly on hover */
+}
+
+
+
+.card {
+  flex: 1;
+  max-width: 300px; /* Adjust the maximum width of each card */
+  padding: 20px;
+  margin-top: -220px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #177569;
+
+}
+
+.Card-contents {
+  display: flex; /* Use Flexbox */
+  background-image: url("src/assets/backgroundBelow.png");
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  height: 170vh;
+  margin-top: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: center; /* Horizontally center all elements */
+  align-items: center;
+  flex-direction: column;
+}
+
+.Card-contents p {
+  margin-top: 0px; /* Adjust the margin as needed */
+  color: white;
+}
+
+.Card-contents h3 {
+  margin-top: 0px; /* Adjust the margin as needed */
+  color: white;
+}
+
+.Card-contents a {
+  margin-top: 0px; /* Adjust the margin as needed */
+  color: white;
+  text-decoration: None;
+  background-color: #e7b924;
+  padding: 1vh;
+  border-radius: 1vh;
+}
+
+
+
+.float-Cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 100px;
+
+}
+
+
+.Card-contents .float-Cards.visible {
+  opacity: 100%;
+}
+
+
+
+
+.Card-contents .float-Cards.hidden {
+  opacity: 0;
+}
+
+.Card-contents .description-users p {
+  padding: 5vh;
+  color: white;
+}
+
+
+.slide p {
+  padding: 1vw;
+}
+
+.news {
+  width: 100%;
+  height: auto; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.news p{
+color: black;
+}
+
+
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start; /* Align items at the top */
+}
+
+.slide {
+  margin-top: 0; /* Adjusted margin-top to start at the top */
+  flex: 0 0 calc(25% - 10px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+
+
+  background-color: white;
+  animation: slideUp 2.5s ease;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure video covers the container */
+  border-top-right-radius: 10px; /*   Add border-radius */
+
+}
+
+.news-title{
+  margin-top: 120px;
+  font-family: "Sarala", sans-serif;
+  color:#fff;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px); /* Start position below */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    transform: translateY(0); /* End position at top */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.slide {
+  opacity: 0;
+  animation: slideUp 0.5s ease forwards; /* Apply the animation to slide up */
+}
+
+
+
+@keyframes moveUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Move the image up slightly */
+  }
+}
+
+.content-backup section img {
+  margin-bottom: 10px;
+  animation: moveUp 2s ease-in-out infinite; /* Apply the animation */
+}
+
+/* ChatModal.css */
+.chat-modal-overlay {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 1000;
+  margin: 60px;
+  animation: moveUp 0.5s ease-in-out;
+}
+
+
+.chat-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 300px; /* Fixed height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-modal-body {
+  margin-top: 20px;
+  height: calc(100% - 20px); /* Adjusted height considering padding */
+/* Enable scrolling if content exceeds height */
+}
+
+
+.chat-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+.chat-conversation {
+  max-height: calc(100% - 60px); /* Adjust as needed */
+  overflow-y: auto;
+  height: 300px;
+}
+
+.customer-message,
+.support-bot-message {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Not needed anymore due to padding-bottom */
+}
+
+.customer-message {
+  background-color: #f2f2f2;
+}
+
+.support-bot-message {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.chat-input-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chat-input-container input {
+  flex: 1; /* Allow the input field to grow horizontally */
+  border: 1px solid #ccc; /* Add a border for styling */
+  padding: 5px; /* Add some padding for better usability */
+  margin-right: 5px; /* Add margin for spacing between input and button */
+}
+
+.chat-input-container button {
+  background-color: #177569; /* Set button background color */
+  color: #fff; /* Set button text color */
+  border: none; /* Remove default button border */
+  padding: 5px 10px; /* Set button padding */
+  cursor: pointer; /* Set cursor style for hover effect */
+}
+
+.chat-message {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.user-message {
+  background-color: #f0f0f0; /* Gray background for user messages */
+  align-self: flex-end;
+  margin-left: 15px;
+  text-align: right;
+  width: auto; /* Allow the message box to expand horizontally */
+  word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+}
+
+
+
+
+.bot-message {
+  background-color: #177569; /* Blue background for bot messages */
+  color: #fff; /* White text color for bot messages */
+  align-self: flex-end;
+  margin-right: 15px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.chat-title {
+  margin: 0; /* Remove default margin */
+}
+
+.bot-profile {
+  display: flex;
+  align-items: center; /* Vertically center items */
+}
+
+
+.ai-name {
+ /* Push the name to the right */
+  align-self: first flex-start; /* Align the name vertically with the image */
+}
+
+
+/* THIS IS THE BUTTON CSS STYLE*/
+.centered-login-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5vh;
+
+}
+
+.btnLOGIN {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnLOGIN::before{
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+
+}
+
+.btnLOGIN::after{
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #177569;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+

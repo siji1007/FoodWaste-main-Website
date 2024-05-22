@@ -1,0 +1,72 @@
+body {
+    background: #177569;
+}
+
+.firstSection {
+    background-image: url(./src/assets/About.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.Title {
+    font-family: "Sarala", sans-serif;
+    font-size: 15vh;
+    color: #fff;
+    padding: 10vh;
+}
+
+.secondSection {
+    background: #273b3800;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    padding: 2vh 0;
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(10vh); /* Start slightly below */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.secondSection.scrolled {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+.secondSection:not(.scrolled) {
+    transition-duration: 0.2s; /* Faster fade-out transition */
+}
+.secondSection h2 {
+    padding-top: 2vh;
+    padding-left: 5vh;
+    font-size: 5vh;
+    color: white;
+}
+
+.developers {
+    display: flex;
+    justify-content: space-around; /* Space out developer blocks */
+    padding: 2vh 5vh; /* Add padding for spacing */
+}
+
+.developer {
+    display: flex;
+    flex-direction: column; /* Arrange image and paragraph in column */
+    align-items: center;
+    margin: 0 2vh; /* Add horizontal margin for spacing */
+}
+
+.developer img {
+    padding: 1vh;
+    width: 20vh; /* Adjust size as needed */
+    height: auto;
+    border-radius: 20%; /* Make the image circular */
+}
+
+.developer p {
+    color: white;
+    margin: 1vh 0 0 0; /* Adjust margin for spacing */
+    text-align: center; /* Center align text */
+}
+
+
